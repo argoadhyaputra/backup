@@ -1,0 +1,123 @@
+*, body {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+body {
+    overflow: hidden;
+
+}
+
+.background {
+    background-image: url("/bg.jpg");
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    // background-size: contain;
+    background-size: 100%;
+    background-position: bottom;
+
+    & .grass {
+        width: 100% !important;
+        // background-color: red;
+        z-index: 8;
+        bottom: 0;
+        position: absolute;
+        overflow: hidden;
+        & object {
+            transform: translateX(-100px);
+            width: 120%;
+        }
+    }
+
+
+    & .char {
+        z-index: 9;
+        position: relative;
+        
+        & .left {
+            height: 100vh;
+            // background-color: grey;
+            overflow: hidden;
+            & .ground {
+                width: 250px;
+                height: 100vh;
+                // background-color: red;
+                & .backGround {
+                    width: 260px !important;
+                    bottom: 0;
+                }
+                & .frontGround {
+                    transform: translateY(15px);
+                    width: 260px !important;
+                    bottom: 0;
+                    z-index: 99 ;
+                }
+                // & svg {
+                //     z-index: 99 !important;
+                //     transform: translateY(198px);
+                //     & #ground {
+                //         & #frontGround {
+                //         }
+                //     }
+                // }
+            }
+            & .zombie {
+                width: 150px;
+                z-index: 10 !important;
+                transform: translateX(-350px) translateY(250px);
+            }
+        }
+
+        & .right {
+            & .ufos {
+                height: 100vh;
+                overflow: hidden;
+                transform: translateX(600px);
+                & #ufos {
+                    width: 300px !important;
+                    & #cahaya {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        & .comps {
+            width: 50%;
+            // background-color: blue;
+            opacity: 0;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            & svg {
+                position: absolute;
+                bottom: 0;
+                width: 180px;
+            }
+        }
+    }
+
+}
+
+.control {
+    width: 100%;
+    height: 100vh;
+    // background-color: red;
+    position: absolute;
+    z-index: 999;
+    & .score .leftScore .scores, & .score .rightScore .scores, & .choice .choices {
+        width: 40px;
+        height: 40px;
+        background: blue;
+        border-radius: 50%;
+        margin: 10px !important;
+    }
+    & .score {
+        width: 100%;
+        height: 70px;
+    }
+    & .choice {
+        // background: yellow;
+        width: 500px;
+        height: 60vh;
+    }
+}
